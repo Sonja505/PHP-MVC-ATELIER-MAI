@@ -6,4 +6,28 @@ define ( 'SITE_URL', 'http://' . $_SERVER['HTTP_HOST'] . $site_url );
 include SITE_PATH . '/includes/Db.php';
 
 
+$page = ( isset ( $_GET['page'] ) ) ? $_GET['page'] : 'articles';
+$action = ( isset ( $_GET['action'] )) ? $_GET['action'] : '';
+
+include SITE_PATH. '/application/'. $page .'/Controller.php';
+
+
+$ctrl = new Controller(  $action );
+
+$view = $ctrl->get_view();
+
+$datas = $ctrl->get_datas();
+
+
+
+
+
+
+        
+ 
+
+echo '<pre>',var_dump($datas),'</pre>';
+
+
+
 include SITE_PATH . '/view/page.php';

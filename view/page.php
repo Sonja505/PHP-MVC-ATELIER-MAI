@@ -14,7 +14,7 @@
                         <li><a href="index.php?page=contact">Contact</a></li>
                     </ul>
                 </nav>
-                <?php include SITE_PATH . '/view/articles/articles.php'; ?>
+                <?php include SITE_PATH . '/view/'. $view; ?>
             </main>
         </div>
     </body>

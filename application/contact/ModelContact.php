@@ -1,6 +1,8 @@
 <?php
+class ModelContact
+{
 
-function checkMessageSent( $action )
+public function checkMessageSent( $action )
 {
     $datas = array();
     
@@ -40,4 +42,5 @@ function checkMessageSent( $action )
     }
     
     return $datas;
+}
 }

@@ -27,9 +27,7 @@ class ModelArticle {
         $datas = [];
         $db = Db::connect();
         
-    
-
-        $results = $db->query('SELECT * FROM articles');
+            $results = $db->query('SELECT * FROM articles');
 
         if (!$db->errno && $results->num_rows > 0) {
             $datas['articles'] = $results;

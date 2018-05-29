@@ -9,12 +9,12 @@ Class Controller  extends CommonController{
     protected function _process() 
  {
         $model_article = new ModelArticle;
-        echo $this->_action;
+     
         if ($this->_action === 'details')
             {
  
-            $this->_datas = $model_article->article($_GET['id']);
-            echo $_GET['id'];
+            $this->_datas = $model_article->article($this->_router);
+       
             $this->_view = 'articles/article_detail.php';
             } 
           

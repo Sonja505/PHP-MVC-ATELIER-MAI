@@ -3,11 +3,13 @@
 class CommonController {
 
     protected $_action;
+     protected $_router;
     protected $_view;
     protected $_datas = [];
 
-    public function __construct($actionUrl) {
+    public function __construct($actionUrl, $routerUrl) {
         $this->_action = $actionUrl;
+         $this->_router = $routerUrl;
 
 
         $this->_process();

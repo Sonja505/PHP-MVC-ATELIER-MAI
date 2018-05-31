@@ -1,19 +1,20 @@
 <?php
+namespace application\contact;
 
-/**
- * Description of Controller
- *
- * @author PA7
- */
-class Controller extends CommonController{
+use includes\components\CommonController;
+use application\contact\ModelContact;
 
 
-   
+class Controller extends CommonController
+{
 
-    protected function _process() {
-        switch ($this->_action) {
+    protected function _process()
+   {
+        echo $this->_action;
+        switch ($this->_action) 
+        {
             case 'send':
-
+ $this->_view = 'contact/contact_sent.php';
                 break;
 
             default :
@@ -22,6 +23,7 @@ class Controller extends CommonController{
 
                 break;
         }
-}} 
+   }
+} 
 
   

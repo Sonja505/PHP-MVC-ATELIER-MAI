@@ -1,10 +1,9 @@
 <?php
 
-/**
- * Description of ModelArticle
- *
- * @author Sonja Guicheux
- */
+namespace application\articles;
+
+use includes\Db;
+
 class ModelArticle {
     //put your code here
     public function articlesJSON() {

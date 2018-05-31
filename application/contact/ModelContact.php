@@ -1,4 +1,8 @@
 <?php
+namespace application\contact;
+
+
+
 class ModelContact
 {
 

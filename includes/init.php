@@ -19,14 +19,6 @@ include SITE_PATH . '/includes/components/CommonController.php';
 
 
 /*Gestion des Template et des Controllers*/
-include SITE_PATH. '/application/'. Bootstrap::get_page() .'/Controller.php';
 
-
-$ctrl = new Controller(  Bootstrap::get_action(), Bootstrap::get_router() );
-
-$view = $ctrl->get_view();
-
-$datas = $ctrl->get_datas();
-
-
-include SITE_PATH . '/view/page.php';
+include SITE_PATH .'/includes/Template.php';
+Template::page();

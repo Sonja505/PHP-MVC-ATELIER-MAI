@@ -1,4 +1,8 @@
 <?php
+namespace application\articles;
+
+use includes\components\CommonController;
+use application\articles\ModelArticle;
 
 include_once SITE_PATH . '/application/articles/ModelArticle.php';
 

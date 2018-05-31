@@ -9,14 +9,13 @@
         <div id="page">
             <main>
                 <nav>
-                    <ul>
-                        <li><a href="<?php echo SITE_URL;?>/articles/form">Add article</a></li>
-                        <li><a href="<?php echo SITE_URL;?>/articles">Accueil</a></li>
-                        <li><a href="<?php echo SITE_URL;?>/contact">Contact</a></li>
-                    </ul>
+                     <?php Template::_includeModule('menus', '', ''); ?>
                 </nav>
-                <?php include SITE_PATH . '/view/'. $view; ?>
+                <?php Template::_includeModule(Bootstrap::get_page(), Bootstrap::get_action(), Bootstrap::get_router()); ?>
             </main>
+            <footer>
+                <?php Template::_includeModule('menus', 'social', ''); ?>
+            </footer>
         </div>
     </body>
 </html>
